@@ -1,0 +1,23 @@
+{
+    "latestVersion": "20180112",
+    "versions": {
+        "20180112": {
+            "releaseTime": "2018-01-12",
+            "changes": [
+                {
+                    "type": "add",
+                    "file": "mods/TConstruct.jar"
+                },
+                {
+                    "type": "delete",
+                    "file": "mods/XRay.jar"
+                },
+                {
+                    "type": "upgrade",
+                    "file": "mods/AE-old.jar",
+                    "to": "mods/AE.jar"
+                }
+            ]
+        }
+    }
+}
