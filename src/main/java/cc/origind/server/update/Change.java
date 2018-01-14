@@ -1,14 +1,11 @@
 package cc.origind.server.update;
 
 import com.google.gson.annotations.SerializedName;
-import com.sun.istack.internal.Nullable;
 
 public class Change {
     @SerializedName("type")
     private String changeType;
     private String file;
-
-    @Nullable
     private String to;
 
     public String getChangeType() {
