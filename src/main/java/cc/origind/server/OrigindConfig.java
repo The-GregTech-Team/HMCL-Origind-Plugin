@@ -12,7 +12,7 @@ public class OrigindConfig {
     private String downloadPrefix;
 
     /**
-     * 当前版本
+     * 当前服务器版本
      */
     private String version;
 
