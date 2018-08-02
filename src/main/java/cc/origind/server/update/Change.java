@@ -8,6 +8,17 @@ public class Change {
     private String file;
     private String to;
 
+    public Change(String changeType, String file) {
+        this.changeType = changeType;
+        this.file = file;
+    }
+
+    public Change(String changeType, String file, String to) {
+        this.changeType = changeType;
+        this.file = file;
+        this.to = to;
+    }
+
     public String getChangeType() {
         return changeType;
     }
@@ -30,6 +41,26 @@ public class Change {
 
     public void setTo(String to) {
         this.to = to;
+    }
+
+    public boolean isUpgrade() {
+        return changeType.equals("upgrade");
+    }
+
+    public boolean isAdd() {
+        return changeType.equals("add");
+    }
+
+    public boolean isDelete() {
+        return changeType.equals("delete");
+    }
+
+    public boolean isMerged() {
+        return changeType.equals("merged");
+    }
+
+    public String getDestination() {
+        return isUpgrade() ? getTo() : getFile();
     }
 
     @Override

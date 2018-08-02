@@ -1,15 +1,13 @@
 package cc.origind.server.update;
 
-import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Update {
+public class Update implements Comparator<Version> {
     private String latestVersion;
 
-    @SerializedName("versions")
-    private Map<String, Version> versionMap = new HashMap<>();
+    private List<Version> versions = new ArrayList<>();
 
     public String getLatestVersion() {
         return latestVersion;
@@ -19,19 +17,24 @@ public class Update {
         this.latestVersion = latestVersion;
     }
 
-    public Map<String, Version> getVersionMap() {
-        return versionMap;
+    public List<Version> getVersions() {
+        return versions;
     }
 
-    public void setVersionMap(Map<String, Version> versionMap) {
-        this.versionMap = versionMap;
+    public void setVersions(List<Version> versions) {
+        this.versions = versions;
     }
 
     @Override
     public String toString() {
         return "Update{" +
                 "latestVersion='" + latestVersion + '\'' +
-                ", versionMap=" + versionMap +
+                ", versions=" + versions +
                 '}';
+    }
+
+    @Override
+    public int compare(Version o1, Version o2) {
+        return Integer.compare(versions.indexOf(o1), versions.indexOf(o2));
     }
 }
