@@ -17,7 +17,7 @@ public class OrigindConfig {
     private String version;
 
     public OrigindConfig() {
-        downloadPrefix = "http://origind-download-1251214188.cossh.myqcloud.com/";
+        downloadPrefix = "http://origind-1251214188.cossh.myqcloud.com/";
         updateJsonURL = downloadPrefix + "update.json";
         version = "20180802";
     }

@@ -22,7 +22,7 @@ public interface ChangeUtil {
                             return true;
                         }
                     } else if (c.isDelete()) {
-                        return Objects.equals(c.getFile(), change.getFile());
+                        return !Objects.equals(c.getFile(), change.getFile());
                     }
                     return false;
                 });
