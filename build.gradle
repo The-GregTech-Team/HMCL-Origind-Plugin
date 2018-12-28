@@ -1,5 +1,5 @@
 group 'cf.origind.server'
-version '0.2.2'
+version '0.3.0'
 
 apply plugin: 'java'
 
